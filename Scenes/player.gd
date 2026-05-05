@@ -5,6 +5,10 @@ const SPEED = 200.0
 const JUMP_VELOCITY = -350.0
 
 
+func _input(event: InputEvent) -> void:
+	if event is InputEventKey and event.pressed:
+		if event.keycode == KEY_Q:
+			scale = Vector2(1,1)
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
