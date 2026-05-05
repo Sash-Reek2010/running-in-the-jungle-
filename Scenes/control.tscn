@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://djuou63jk6ri"]
+
+[ext_resource type="Script" uid="uid://b8k5c63nwbj0" path="res://control.gd" id="1_sjmnu"]
+[ext_resource type="Texture2D" uid="uid://dh3roowng23ti" path="res://Sprites/Background.png" id="2_cgmvo"]
+
+[node name="Control" type="Control" unique_id=1778844622]
+layout_mode = 3
+anchor_left = 0.058000002
+anchor_top = 0.036000002
+anchor_right = 0.41200003
+anchor_bottom = 0.418
+offset_left = 148.18399
+offset_top = 99.672
+offset_right = -180.62402
+offset_bottom = -120.86401
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sjmnu")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=79465624]
+position = Vector2(367.5, 212)
+scale = Vector2(1.9913194, 1.9814814)
+texture = ExtResource("2_cgmvo")
+
+[node name="Label" type="Label" parent="." unique_id=1463065067]
+layout_mode = 0
+offset_left = 232.0
+offset_top = 134.0
+offset_right = 312.0
+offset_bottom = 166.0
+scale = Vector2(3, 3)
+text = "YOU WIN!!"
+
+[node name="Quit" type="Button" parent="." unique_id=199381747]
+layout_mode = 0
+offset_left = 472.0
+offset_top = 235.0
+offset_right = 541.0
+offset_bottom = 266.0
+text = "Quit T-T"
+
+[node name="PlayAgain" type="Button" parent="." unique_id=1691197931]
+layout_mode = 0
+offset_left = 146.0
+offset_top = 234.0
+offset_right = 239.0
+offset_bottom = 265.0
+text = "Play Again!"
+
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="PlayAgain" to="." method="_on_play_again_pressed"]
